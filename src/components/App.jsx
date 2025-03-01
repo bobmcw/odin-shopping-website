@@ -2,12 +2,11 @@ import { useState } from 'react'
 import styles from '../styles/App.module.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <h1>App</h1>
-    </>
+    <div className={styles.page}>
+      <h1>Store</h1>
+      <div className={styles.banner}></div>
+    </div>
   )
 }
 
