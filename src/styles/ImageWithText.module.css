@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 100px;
     width: 90%;
+    padding: 50px;
 }
 img {
     max-width: 50%;
