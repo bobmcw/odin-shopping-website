@@ -2,6 +2,7 @@ import Banner from "./Banner";
 import styles from "../styles/App.module.css";
 import { useEffect } from "react";
 import ImageWithText from "./ImageWithText";
+import banner from "../assets/banner.jpeg"
 
 function App() {
   useEffect(() => {
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className={styles.page}>
       <h1>Store</h1>
-      <Banner />
+      <Banner backgroundImg={banner} />
       <ImageWithText />
     </div>
   );

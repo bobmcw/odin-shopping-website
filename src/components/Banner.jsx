@@ -3,7 +3,7 @@ function Banner({ backgroundImg }) {
   return (
     <div
       className={styles.banner}
-      style={{ backgroundImage: backgroundImg }}
+      style={{ backgroundImage: `url(${backgroundImg})`, }}
     ></div>
   );
 }
