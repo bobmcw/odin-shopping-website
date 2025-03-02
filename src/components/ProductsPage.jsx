@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import styles from "../assets/ProductsPage.module.css"
 function ProductsPage() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -11,7 +12,9 @@ function ProductsPage() {
     console.log(products);
   }, [products]);
   return (
-    <div className="productsPage">
+    <>
+    <nav className={styles.sideNav}>sideNav</nav>
+    <div className={styles.productsPage}>
       {products.map((product) => {
         return (
           <ProductCard
@@ -22,6 +25,7 @@ function ProductsPage() {
         );
       })}
     </div>
+    </>
   );
 }
 export default ProductsPage;
