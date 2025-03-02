@@ -1,14 +1,14 @@
-import PropTypes from "prop-types"
-function ImageWithText({imageUrl, text}){
-    return(
-        <div className="imageWithText">
-            <img src={imageUrl} alt="" />
-            <p>{text}</p>
-        </div>
-    )
+import PropTypes from "prop-types";
+import styles from "../styles/ImageWithText.module.css";
+import defaultImage from "../assets/noImage.png";
+
+function ImageWithText({ imageUrl=defaultImage, text="missing text", alt="" }) {
+  return (
+    <div className={styles.imageWithText}>
+      <img className={styles.img} src={imageUrl} alt={alt} />
+      <p className={styles.p}>{text}</p>
+    </div>
+  );
 }
-ImageWithText.PropTypes = {
-    imageUrl: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-}
+
 export default ImageWithText;
