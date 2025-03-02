@@ -1,12 +1,33 @@
 .card {
-    max-width: 300px;
+    width: 80%;
     border: 1px solid black;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
     align-items: center;
-    text-align: center;
     border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 1%;
 }
-.card > p {
-    font-size: 1rem;
+.cardInfo > p {
+    text-overflow: ellipsis;
+    line-clamp: 3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+ .card > img {
+    height: 100px;
+    aspect-ratio: 1/1;
+    margin-right: 5%;
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInfo > h3 {
+    font-size: 1.5rem;
 }

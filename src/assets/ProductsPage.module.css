@@ -1,13 +1,14 @@
 .productsPage {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 1%;
     gap: 1%;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding-left: 20%;
+    padding-left: max(200px,20%);
 }
 .sideNav {
     float: left;
     width: 20%;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
