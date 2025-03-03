@@ -15,6 +15,7 @@ function ProductsPage() {
                 id={category}
                 name={category}
                 checked
+                key={category}
               ></input>
               <label htmlFor={category}>{category}</label>
             </div>
