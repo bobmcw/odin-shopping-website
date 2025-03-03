@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import styles from "../assets/ProductsPage.module.css"
+import useProductLoader from "../hooks/useProducts";
 function ProductsPage() {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products/")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
-  }, []);
-  useEffect(() => {
-    console.log(products);
-  }, [products]);
+
+  const {error, loading, products, categories } = useProductLoader()
+  console.log(categories);
   return (
     <>
     <nav className={styles.sideNav}>sideNav</nav>
