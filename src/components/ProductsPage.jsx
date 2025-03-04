@@ -4,6 +4,16 @@ import styles from "../assets/ProductsPage.module.css";
 import useProductLoader from "../hooks/useProducts";
 function ProductsPage() {
   const { error, loading, products, categories } = useProductLoader();
+  const [visibleCategories, setVisibleCategories] = useState()
+
+  useEffect(()=> {
+      setVisibleCategories(categories.reduce((acc, category) => ({...acc, [category]: true}),{}))
+  },[categories])
+
+  useEffect(() => {
+    console.log(visibleCategories)
+  },[visibleCategories])
+
   return (
     <>
       <nav className={styles.sideNav}>
@@ -14,7 +24,8 @@ function ProductsPage() {
                 type="checkbox"
                 id={category}
                 name={category}
-                checked
+                checked={visibleCategories[category]}
+                onChange={(e) => {setVisibleCategories({...visibleCategories, [category]: !visibleCategories[category]})}}
                 key={category}
               ></input>
               <label htmlFor={category}>{category}</label>
@@ -30,6 +41,7 @@ function ProductsPage() {
               name={product.title}
               description={product.description}
               key={product.id}
+              visible={visibleCategories[product.category]}
             />
           );
         })}
