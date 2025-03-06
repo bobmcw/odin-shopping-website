@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import styles from "../assets/ProductsPage.module.css";
 import useProductLoader from "../hooks/useProducts";
+import ProductFilter from "./ProductFilter";
 function ProductsPage() {
   const { error, loading, products, categories } = useProductLoader();
   const [visibleCategories, setVisibleCategories] = useState()
@@ -16,23 +17,7 @@ function ProductsPage() {
 
   return (
     <>
-      <nav className={styles.sideNav}>
-        {categories.map((category) => {
-          return (
-            <div className="cateogory">
-              <input
-                type="checkbox"
-                id={category}
-                name={category}
-                checked={visibleCategories[category]}
-                onChange={(e) => {setVisibleCategories({...visibleCategories, [category]: !visibleCategories[category]})}}
-                key={category}
-              ></input>
-              <label htmlFor={category}>{category}</label>
-            </div>
-          );
-        })}
-      </nav>
+     <ProductFilter categories={categories} visibleCategories={visibleCategories} setVisibleCategories={setVisibleCategories} /> 
       <div className={styles.productsPage}>
         {products.map((product) => {
           return (
