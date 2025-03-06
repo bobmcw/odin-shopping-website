@@ -9,8 +9,8 @@ function ProductFilter({ categories, visibleCategories,setVisibleCategories }) {
                 type="checkbox"
                 id={category}
                 name={category}
-                checked={visibleCategories[category]}
-                onChange={(e) => {setVisibleCategories({...visibleCategories, [category]: !visibleCategories[category]})}}
+                checked={visibleCategories[category] !== undefined ? visibleCategories[category] : true}
+                onChange={() => {setVisibleCategories({...visibleCategories, [category]: !visibleCategories[category]})}}
                 key={category}
               ></input>
               <label htmlFor={category}>{category}</label>
