@@ -4,7 +4,7 @@ function ProductFilter({ categories, visibleCategories,setVisibleCategories }) {
       <nav className={styles.sideNav}>
         {categories.map((category) => {
           return (
-            <div className="cateogory" key={category}>
+            <div className={styles.category} key={category}>
               <input
                 type="checkbox"
                 id={category}
