@@ -1,10 +1,27 @@
 .sideNav {
     float: left;
-    width: 20%;
     min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     position: fixed;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+.category > label {
+    text-align: left;
+    text-overflow: ellipsis;
+    line-clamp: 3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.category > input {
+    justify-self: end;
 }
