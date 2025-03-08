@@ -2,7 +2,7 @@ import styles from "../styles/ProductFilter.module.css"
 function ProductFilter({ categories, visibleCategories,setVisibleCategories, search, setSearch }) {
     return(
       <nav className={styles.sideNav}>
-        <input type="text" name="search" id="search" placeholder="search" onChange={(e)=> setSearch(e.target.value)} value={search} />
+        <input className={styles.search} type="text" name="search" id="search" placeholder="search" onChange={(e)=> setSearch(e.target.value)} value={search} />
         {categories.map((category) => {
           return (
             <div className={styles.category} key={category}>
