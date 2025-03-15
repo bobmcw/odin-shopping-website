@@ -23,11 +23,13 @@
 .preview > img {
     aspect-ratio: 1/1;
     height: 30%;
-    margin-right: 5%;
+    margin: auto auto;
+
 }
 .text {
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
 }
 .text > p {
     flex: 1;
