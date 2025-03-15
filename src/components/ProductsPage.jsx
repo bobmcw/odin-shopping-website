@@ -3,7 +3,9 @@ import ProductCard from "./ProductCard";
 import styles from "../assets/ProductsPage.module.css";
 import useProductLoader from "../hooks/useProducts";
 import ProductFilter from "./ProductFilter";
+import { useOutletContext } from "react-router-dom";
 function ProductsPage() {
+  const [cart, setCart] = useOutletContext();
   const { error, loading, products, categories } = useProductLoader();
   const [visibleCategories, setVisibleCategories] = useState()
   const [search, setSearch] = useState("");
@@ -26,6 +28,7 @@ function ProductsPage() {
               description={product.description}
               key={product.id}
               price={product.price}
+              action={setCart}
               visible={visibleCategories[product.category]}
             />
           );

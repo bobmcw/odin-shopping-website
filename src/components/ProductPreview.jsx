@@ -4,7 +4,7 @@ function ProductPreview({
   imageUrl,
   name,
   description,
-  action,
+  setCart,
   price,
   setPreview,
 }) {
@@ -46,7 +46,7 @@ function ProductPreview({
               }}
             />
             <button onClick={() => setAmount(amount + 1)}>+</button>
-            <button onClick={() => action}>add to card</button>
+            <button onClick={() => setCart}>add to card</button>
           </div>
         </div>
       </div>

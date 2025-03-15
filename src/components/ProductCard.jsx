@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/ProductCard.module.css";
 import ProductPreview from "./ProductPreview";
-function ProductCard({imageUrl, name, description, price,action, visible=true}) {
+function ProductCard({imageUrl, name, description, price, setCart, visible=true}) {
   const [preview, setPreview] = useState(false);
   return (
     <>
@@ -13,7 +13,7 @@ function ProductCard({imageUrl, name, description, price,action, visible=true}) 
               <h2>${price}</h2>
           </div>
       </div>
-      {preview ? <ProductPreview imageUrl={imageUrl} name={name} description={description} action={action} price={price} setPreview={setPreview}/> : ""}
+      {preview ? <ProductPreview imageUrl={imageUrl} name={name} description={description} action={setCart} price={price} setPreview={setPreview}/> : ""}
     </>
   );
 }
