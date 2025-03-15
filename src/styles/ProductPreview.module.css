@@ -18,6 +18,7 @@
     border: 1px solid black;
     display: flex;
     flex-direction: row;
+    z-index: 11;
 }
 .preview > img {
     aspect-ratio: 1/1;
@@ -36,4 +37,15 @@
 }
 .addToCard > input{
     width: 25px;
+}
+.close {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    height: fit-content;
+    font-size: 1.5rem;
 }

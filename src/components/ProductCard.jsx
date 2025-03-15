@@ -13,7 +13,7 @@ function ProductCard({imageUrl, name, description, action, visible=true}) {
           </div>
           {action}
       </div>
-      {preview ? <ProductPreview imageUrl={imageUrl} name={name} description={description} action={action} /> : ""}
+      {preview ? <ProductPreview imageUrl={imageUrl} name={name} description={description} action={action} setPreview={setPreview}/> : ""}
     </>
   );
 }
