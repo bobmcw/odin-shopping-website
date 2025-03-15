@@ -13,10 +13,6 @@ function ProductsPage() {
       setVisibleCategories(categories.reduce((acc, category) => ({...acc, [category]: true}),{}))
   },[categories])
 
-  useEffect(() => {
-    console.log(visibleCategories)
-  },[visibleCategories])
-
   return (
     <>
      <ProductFilter categories={categories} visibleCategories={visibleCategories} setVisibleCategories={setVisibleCategories} search={search} setSearch={setSearch} /> 
