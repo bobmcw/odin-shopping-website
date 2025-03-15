@@ -10,6 +10,7 @@
     margin-bottom: 1%;
 }
 .cardInfo > p {
+    font-size: 0.9rem;
     text-overflow: ellipsis;
     line-clamp: 3;
     overflow: hidden;

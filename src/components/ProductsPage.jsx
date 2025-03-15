@@ -25,6 +25,7 @@ function ProductsPage() {
               name={product.title}
               description={product.description}
               key={product.id}
+              price={product.price}
               visible={visibleCategories[product.category]}
             />
           );
