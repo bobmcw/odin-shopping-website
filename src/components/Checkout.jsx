@@ -8,7 +8,9 @@ function Checkout() {
   const [cart, setCart] = useOutletContext();
   if(Array.from(cart).length === 0){
     return(
-        <h1>No items added to the cart yet!</h1>
+        <div className={styles.checkout}>
+            <h1 style={{margin: 'auto auto'}}>No items added to the cart yet!</h1>
+        </div>
     )
   }
   else{
