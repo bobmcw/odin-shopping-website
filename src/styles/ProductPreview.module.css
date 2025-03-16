@@ -12,7 +12,8 @@
 }
 .preview{
     background-color: white;
-    width: min-content;
+    min-width: min-content;
+    max-width: 50%;
     padding: 2%;
     border-radius: 8px;
     border: 1px solid black;
