@@ -30,6 +30,8 @@ function ProductsPage() {
               price={product.price}
               action={setCart}
               visible={visibleCategories[product.category]}
+              cart={cart}
+              setCart={setCart}
             />
           );
         })}

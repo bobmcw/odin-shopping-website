@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styles from "../styles/ProductPreview.module.css";
+
 function ProductPreview({
   imageUrl,
   name,
   description,
+  cart,
   setCart,
   price,
   setPreview,
@@ -15,6 +17,19 @@ function ProductPreview({
     } else {
       setAmount(amount - 1);
     }
+  }
+  function handleAddToCart(name, imageUrl, price, amount) {
+    setCart(prev => {
+      const newCart = new Map(prev);
+      if(newCart.has(name)){
+        const item = newCart.get(name);
+        newCart.set(name, {...item, amount: item.amount+amount});
+      }
+      else {
+        newCart.set(name, {imageUrl, price, amount});
+      }
+      return newCart;
+    });
   }
   return (
     <div
@@ -29,7 +44,7 @@ function ProductPreview({
         <button className={styles.close} onClick={() => setPreview(false)}>
           X
         </button>
-          <img src={imageUrl} alt="" />
+        <img src={imageUrl} alt="" />
         <div className={styles.text}>
           <h1>{name}</h1>
           <p>{description}</p>
@@ -46,7 +61,7 @@ function ProductPreview({
               }}
             />
             <button onClick={() => setAmount(amount + 1)}>+</button>
-            <button onClick={() => setCart}>add to card</button>
+            <button onClick={() => handleAddToCart(name, imageUrl, price, amount)}>add to card</button>
           </div>
         </div>
       </div>
