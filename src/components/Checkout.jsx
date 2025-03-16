@@ -6,6 +6,13 @@ import AppleIcon from '@mui/icons-material/Apple';
 
 function Checkout() {
   const [cart, setCart] = useOutletContext();
+  if(Array.from(cart).length === 0){
+    return(
+        <h1>No items added to the cart yet!</h1>
+    )
+  }
+  else{
+
   return (
     <>
       <div className={styles.checkout}>
@@ -34,5 +41,6 @@ function Checkout() {
       </div>
     </>
   );
+}
 }
 export default Checkout;
