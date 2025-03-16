@@ -5,8 +5,8 @@ import defaultImage from "../assets/noImage.png";
 function ImageWithText({ imageUrl=defaultImage, text="missing text", alt="" }) {
   return (
     <div className={styles.imageWithText}>
-      <img className={styles.img} src={imageUrl} alt={alt} />
-      <p className={styles.p}>{text}</p>
+      <img className={styles.image} src={imageUrl} alt={alt} />
+      <p className={styles.paragraph}>{text}</p>
     </div>
   );
 }

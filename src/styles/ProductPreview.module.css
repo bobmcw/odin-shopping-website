@@ -12,7 +12,7 @@
 }
 .preview{
     background-color: white;
-    width: 50%;
+    width: min-content;
     padding: 2%;
     border-radius: 8px;
     border: 1px solid black;
@@ -23,6 +23,7 @@
 .preview > img {
     aspect-ratio: 1/1;
     height: 30%;
+    max-height: 300px;
     margin: auto auto;
 
 }
@@ -30,9 +31,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-}
-.text > p {
-    flex: 1;
+    max-width: 50%;
 }
 .addToCard > * {
     padding: 10px;

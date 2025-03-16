@@ -6,10 +6,10 @@
     width: 90%;
     padding: 50px;
 }
-img {
+.image {
     max-width: 50%;
 }
-p{
+.paragraph{
     align-self: center;
     font-size: 1.5rem;
 }
