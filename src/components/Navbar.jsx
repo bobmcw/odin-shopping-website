@@ -7,6 +7,7 @@ function Navbar() {
             <div className={styles.links}>
                 <Link to="/">Main page</Link>
                 <Link to="/products">Products</Link>
+                <Link to="/checkout">checkout</Link>
             </div>
         </nav>
     );
