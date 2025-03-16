@@ -1,12 +1,11 @@
 import styles from "../styles/CheckoutButton.module.css";
-import AppleIcon from '@mui/icons-material/Apple';
 
-function CheckoutButton({ logo, color, text }) {
+function CheckoutButton({ logo, color, fontColor, text }) {
   return (
     <button style={{ backgroundColor: color }}>
       <div className={styles.inner}>
-        {<AppleIcon color="white"/>}
-        <p>{text}</p>
+        {logo}
+        <p style={{color: fontColor}}>{text}</p>
       </div>
     </button>
   );

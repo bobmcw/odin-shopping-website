@@ -1,0 +1,34 @@
+.productsList{
+    width: 50%;
+}
+.summaryName{
+    font-size: 1rem;
+    font-weight: bold;
+    flex: 1;
+}
+.checkout{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+.price{
+    justify-self: flex-end;
+    padding-left: 10%;
+}
+.summaryItem{
+    display: flex;
+    flex-direction: row;
+}
+.summary{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 2%;
+}
+.buttons{
+    width: 100%;
+}
+.itemList{
+    flex: 1;
+}
