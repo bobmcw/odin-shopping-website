@@ -39,7 +39,7 @@ function Checkout() {
                 })}
                 <div className={styles.total}>
                     <p>Total: </p>
-                    <p className={styles.ammount}>${Array.from(cart).reduce((acc, a) => acc += a[1].price,0)}</p>
+                    <p className={styles.ammount}>${Array.from(cart).reduce((acc, a) => acc += a[1].price * a[1].amount,0)}</p>
                 </div>
             </div>
         <div className={styles.buttons}>
