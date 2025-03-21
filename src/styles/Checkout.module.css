@@ -12,8 +12,8 @@
     padding: 5%;
 }
 .price{
-    justify-self: flex-end;
     padding-left: 10%;
+    margin-left: auto;
 }
 .summaryItem{
     display: flex;
@@ -29,6 +29,18 @@
 .buttons{
     width: 100%;
 }
+.buttons > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 .itemList{
     flex: 1;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+}
+.ammount{
+    justify-self: flex-end;
+    margin-left: auto;
 }

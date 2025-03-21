@@ -3,6 +3,8 @@ import CheckoutButton from "./CheckoutButton";
 import ProductCard from "./ProductCard";
 import { useOutletContext } from "react-router-dom";
 import AppleIcon from '@mui/icons-material/Apple';
+import GoogleIcon from '@mui/icons-material/Google';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 
 function Checkout() {
   const [cart, setCart] = useOutletContext();
@@ -35,9 +37,15 @@ function Checkout() {
                         </div>
                     )
                 })}
+                <div className={styles.total}>
+                    <p>Total: </p>
+                    <p className={styles.ammount}>${Array.from(cart).reduce((acc, a) => acc += a[1].price,0)}</p>
+                </div>
             </div>
         <div className={styles.buttons}>
+            <CheckoutButton  logo={<GoogleIcon />} text={'Google Pay'} color={'#FFFFFF'}/>
             <CheckoutButton logo={<AppleIcon style={{color: "white"}} />} fontColor={"#FFFFFF"} text={'Apple Pay'} color={'#000000'} />
+            <CheckoutButton logo={<CreditCardIcon />} text={'Credit card'}/>
         </div>
         </div>
       </div>
