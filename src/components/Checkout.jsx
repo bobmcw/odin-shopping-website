@@ -23,7 +23,7 @@ function Checkout() {
         <div className={styles.productsList}>
           {Array.from(cart).map((item) => {
             return <>
-               <ProductCard name={item[0]} price={item[1].price} imageUrl={item[1].imageUrl}/> 
+               <ProductCard name={item[0]} price={item[1].price} imageUrl={item[1].imageUrl} interactive={false}/> 
             </>;
           })}
         </div>
