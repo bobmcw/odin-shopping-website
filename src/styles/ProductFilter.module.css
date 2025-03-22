@@ -18,3 +18,11 @@
     width: 50%;
     margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+    .sideNav {
+       position: inherit; 
+       height: 10%;
+       width: 100%;
+       display: flex;
+    }     
+}

@@ -13,3 +13,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+@media  screen and (max-width: 600px) {
+    .productsPage{
+        padding-left: 0;
+        margin: 1%;
+    }
+}
