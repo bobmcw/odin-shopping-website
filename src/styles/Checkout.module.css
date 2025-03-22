@@ -60,3 +60,15 @@
     border: none;
     cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+    .checkout{
+       flex-direction: column; 
+       padding-left: 0;
+    } 
+    .productsList{
+        width: 90%;
+    }
+    .summary{
+        width: 90%;
+    }
+}
