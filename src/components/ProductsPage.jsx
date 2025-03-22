@@ -16,6 +16,7 @@ function ProductsPage() {
   },[categories])
 
   return (
+    loading ? <h1 className={styles.communicate}>Loading...</h1> : error ? <h1 className={styles.communicate}>An error has occured</h1> :
     <>
      <ProductFilter categories={categories} visibleCategories={visibleCategories} setVisibleCategories={setVisibleCategories} search={search} setSearch={setSearch} /> 
       <div className={styles.productsPage}>
