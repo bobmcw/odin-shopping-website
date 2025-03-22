@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
-import styles from "../assets/ProductsPage.module.css";
+import styles from "../styles/ProductsPage.module.css";
 import useProductLoader from "../hooks/useProducts";
 import ProductFilter from "./ProductFilter";
 import { useOutletContext } from "react-router-dom";
