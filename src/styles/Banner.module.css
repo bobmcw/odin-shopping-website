@@ -1,7 +1,9 @@
 .banner{
-    background-position: center;
+    padding-top: 50%;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 95svh;
+    height: 100vh;
+    margin: auto auto;
 }
