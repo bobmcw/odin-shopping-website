@@ -28,7 +28,7 @@ function Checkout() {
                <ProductCard name={item[0]} price={item[1].price} imageUrl={item[1].imageUrl} interactive={false}/> 
                <div className={styles.controls}>
                    <button onClick={() => {
-                    const newCart = cart;
+                    const newCart = new Map(cart);
                     newCart.delete(item[0]);
                     setCart(newCart);
                     }}>

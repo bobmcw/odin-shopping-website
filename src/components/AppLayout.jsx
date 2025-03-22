@@ -10,7 +10,7 @@ function AppLayout() {
   return (
     <>
       <Navbar />
-      <Outlet context={[cart, setCart]}/>
+      <Outlet context={[cart, setCart]} />
     </>
   );
 }
