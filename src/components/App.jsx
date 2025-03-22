@@ -1,6 +1,5 @@
 import Banner from "./Banner";
 import styles from "../styles/App.module.css";
-import { useEffect } from "react";
 import ImageWithText from "./ImageWithText";
 import banner from "../assets/banner.jpeg"
 import placeholder1 from "../assets/placeholder1.jpeg"
