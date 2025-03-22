@@ -16,3 +16,12 @@
     align-self: center;
     font-size: 1.5rem;
 }
+@media screen and (max-width: 600px) {
+    .imageWithText{
+        display: flex;
+        flex-direction: column;
+    }
+    .image{
+        margin: auto auto;
+    }
+}
