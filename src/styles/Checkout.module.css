@@ -44,3 +44,10 @@
     justify-self: flex-end;
     margin-left: auto;
 }
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+.delete{
+    margin: auto auto;
+}
