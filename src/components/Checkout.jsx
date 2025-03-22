@@ -27,12 +27,12 @@ function Checkout() {
             <div className={styles.cards} key={item[0]} >
                <ProductCard name={item[0]} price={item[1].price} imageUrl={item[1].imageUrl} interactive={false}/> 
                <div className={styles.controls}>
-                   <button onClick={() => {
+                   <button className={styles.delete} onClick={() => {
                     const newCart = new Map(cart);
                     newCart.delete(item[0]);
                     setCart(newCart);
                     }}>
-                       <DeleteIcon className={styles.delete} />
+                       <DeleteIcon  />
                    </button>
                </div>
             </div>
