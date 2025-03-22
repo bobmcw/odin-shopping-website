@@ -25,3 +25,11 @@
   align-self: center;
   margin-right: 2%;
 }
+@media screen and (max-width: 600px) {
+    .links{
+      flex-grow: 0;
+    }
+    .icon{
+      margin-left: 5%;
+    }
+}
