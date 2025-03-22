@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/ProductPreview.module.css";
+import { useNavigate } from "react-router-dom";
 
 function ProductPreview({
   imageUrl,
@@ -11,6 +12,8 @@ function ProductPreview({
   setPreview,
 }) {
   const [amount, setAmount] = useState(1);
+  const [added,setAdded] = useState(false);
+  const navigate = useNavigate();
   function handleDecrese(amount) {
     if (amount <= 1) {
       setAmount(1);
@@ -28,6 +31,7 @@ function ProductPreview({
       else {
         newCart.set(name, {imageUrl, price, amount});
       }
+      setAdded(true);
       return newCart;
     });
   }
@@ -50,6 +54,8 @@ function ProductPreview({
           <p>{description}</p>
           <h2>${price}</h2>
           <div className={styles.addToCard}>
+            {!added ? 
+            <>
             <button onClick={() => handleDecrese(amount)}>-</button>
             <input
               type="number"
@@ -62,6 +68,15 @@ function ProductPreview({
             />
             <button onClick={() => setAmount(amount + 1)}>+</button>
             <button onClick={() => handleAddToCart(name, imageUrl, price, amount)}>add to card</button>
+            </> : 
+            <>
+            <h1 style={{textAlign: "center"}}>Item added!</h1>
+            <div className={styles.itemAdded}>
+              <button onClick={() => navigate("/checkout")}>go to checkout</button>
+              <button onClick={() => setPreview(false)} >continue shopping</button>
+            </div>
+            </>
+            }
           </div>
         </div>
       </div>

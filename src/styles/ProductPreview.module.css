@@ -51,3 +51,11 @@
     height: fit-content;
     font-size: 1.5rem;
 }
+.itemAdded {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.itemAdded > button {
+    margin: 5%;
+}
