@@ -59,3 +59,19 @@
 .itemAdded > button {
     margin: 5%;
 }
+@media screen and (max-width: 600px) {
+    .preview{
+        display: flex;
+        flex-direction: column;
+        margin: auto auto;
+        width: 100vw;
+        max-width: none;
+        margin: 1%;
+    } 
+    .close{
+        margin-right: auto;
+    }
+    .text{
+        margin: auto auto;
+    }
+}
