@@ -1,5 +1,6 @@
 .navbar {
   position: sticky;
+  width: 100%;
   top: 0;
   background-color: lightblue;
   min-height: 50px;
@@ -15,9 +16,12 @@
   font-weight: bold;
   text-decoration: none;
 }
-.links > :first-child {
-  margin-left: 0;
+.links{
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
 }
-.links > :last-child {
-  margin-right: 0;
+.icon{
+  align-self: center;
+  margin-right: 2%;
 }
