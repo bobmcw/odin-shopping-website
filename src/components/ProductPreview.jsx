@@ -22,6 +22,7 @@ function ProductPreview({
     }
   }
   function handleAddToCart(name, imageUrl, price, amount) {
+    setAdded(true);
     setCart(prev => {
       const newCart = new Map(prev);
       if(newCart.has(name)){
@@ -31,7 +32,6 @@ function ProductPreview({
       else {
         newCart.set(name, {imageUrl, price, amount});
       }
-      setAdded(true);
       return newCart;
     });
   }
